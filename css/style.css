@@ -303,7 +303,7 @@ nav::before {
 /*---------------------------------------------------------------------------footer---------------------------------------------------------------------------*/
 
 .end {
-  background-image: url(../images/visual/decoration.png);
+  background-image: url(/images/visual/decoration.png);;
   background-repeat: repeat;
 }
 
@@ -1458,4 +1458,5 @@ body[data-page="concept"] .concept-text p {
     opacity: 1;
   }
 }
+
 
