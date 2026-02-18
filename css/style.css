@@ -1205,7 +1205,7 @@ body[data-page="concept"] .concept-text {
 }
 
 body[data-page="concept"] .concept-text p {
-  font-size: clamp(0.875rem, 0.8rem + 0.38vw, 1.25rem)
+  font-size: clamp(0.875rem, 0.8rem + 0.38vw, 1.25rem);
   line-height: 2;
 }
 
@@ -1495,6 +1495,7 @@ body[data-page="concept"] .concept-text p {
     content: none !important;
   }
 }
+
 
 
 
