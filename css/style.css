@@ -103,7 +103,7 @@ section {
 }
 
 nav {
-  background-image: url(/images/visual/decoration.png);
+  background-image: url(../images/visual/decoration.png);
   background-repeat: repeat;
   width: 100%;
   height: var(--nav-height);
@@ -303,7 +303,7 @@ nav::before {
 /*---------------------------------------------------------------------------footer---------------------------------------------------------------------------*/
 
 .end {
-  background-image: url(images/visual/decoration.png);
+   background-image: url(../images/visual/decoration.png);
   background-repeat: repeat;
 }
 
@@ -323,7 +323,7 @@ nav::before {
   max-width: 320px; /* ★ 大きすぎ防止（超重要） */
   height: 100vh;
 
-  background-image: url(images/visual/decoration.png);
+  background-image: url(../images/visual/decoration.png);
   background-repeat: repeat;
 
   display: flex;
@@ -1458,6 +1458,7 @@ body[data-page="concept"] .concept-text p {
     opacity: 1;
   }
 }
+
 
 
 
