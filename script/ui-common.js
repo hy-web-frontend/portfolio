@@ -115,7 +115,7 @@ window.addEventListener(
    サイト情報
 ========================= */
 const SITE_NAME = "Demo Site Store";
-const HOME_PAGE = "Home.html";
+const HOME_PAGE = "home.html";
 
 /* =========================
    パンくず定義
