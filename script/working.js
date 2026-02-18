@@ -129,7 +129,7 @@ const buildJobCard = (cast) => {
     .join("");
 
   return `
-    <a href="Profile.html?id=${cast.id}" class="j-card">
+    <a href="profile.html?id=${cast.id}" class="j-card">
       <div class="j-img">
         <img
           src="${cast.main_photo}"
