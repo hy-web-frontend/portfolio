@@ -1,0 +1,1477 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  color: white;
+}
+
+body {
+  margin: 0;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  background-color: rgb(50, 45, 45);
+  overflow-x: hidden;
+}
+:root {
+  --nav-height: 48px;
+  --basic-info-height: 77px;
+}
+
+main {
+  margin-top: var(--nav-height);
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+p {
+  font-weight: bold;
+}
+section {
+  margin-bottom: 2.5rem;
+}
+
+/*---------------------------------------------------------------header-------------------------------------------------------------------------*/
+
+.basic-info {
+  width: 100vw;
+  background-color: rgb(79, 78, 78);
+  display: flex;
+  align-items: center;
+  height: var(--basic-info-height);
+}
+.basic-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
+}
+.top-info {
+  margin: 0.5rem 0;
+}
+.info-time {
+  font-size: clamp(1rem, 0.833rem + 0.35vw, 1.25rem);
+}
+.info-time span {
+  font-family: "Kaisei Decol", serif;
+}
+.info-tel {
+  font-size: clamp(1.25rem, 1.083rem + 0.35vw, 1.5rem);
+}
+
+.visual img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/*----------------------------ナビゲーションメニュー*/
+#nav-spacer {
+  height: var(--nav-height);
+  display: none;
+}
+
+nav {
+  background-image: url("/portfolio/images/visual/decoration.png");
+  background-repeat: repeat;
+  width: 100%;
+  height: var(--nav-height);
+  position: absolute;
+  left: 0;
+  z-index: 1000;
+}
+
+nav.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.nav-inner {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.menu {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  flex: 1;
+  text-align: center;
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+.menu li:first-of-type {
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+.menu a {
+  font-weight: bold;
+  font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.1em;
+  display: block;
+  width: 100%;
+  padding: 12px 8px;
+  display: inline-block;
+  opacity: 1;
+}
+
+.menu a:hover {
+  opacity: 0.6;
+  transform: scale(1.04);
+}
+
+/* --------------------------------------================= パンくずリスト =================------------------------------ */
+
+.breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
+  font-size: clamp(0.625rem, 0.575rem + 0.25vw, 0.875rem);
+  position: relative;
+  z-index: 10;
+}
+
+.breadcrumb ol {
+  display: flex;
+  gap: 8px;
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 各項目 */
+.breadcrumb-list li {
+  color: #ccc;
+  white-space: nowrap;
+}
+
+/* リンク */
+.breadcrumb-list li a {
+  color: #c9a24d;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumb-list li a:hover {
+  opacity: 0.7;
+}
+
+/* 区切り記号 */
+.breadcrumb-list li::after {
+  content: "＞";
+  margin-left: 0.4rem;
+  color: #888;
+}
+
+/* 最後は区切らない */
+.breadcrumb-list li:last-child::after {
+  content: "";
+}
+
+/* 現在地 */
+.breadcrumb-list li.current {
+  color: #fff;
+  font-weight: bold;
+}
+
+/*-------------------------------------------------------------------------共通クラス--------------------------------------------------------------------------------*/
+.a-container {
+  max-width: 900px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.b-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.a-container.home:not(:first-of-type) {
+  padding-top: 0.4rem;
+}
+.title {
+  margin-bottom: 1.25rem;
+}
+.h-main-title {
+  display: flex;
+  justify-content: center;
+  align-items: baseline; /* ← 超重要 */
+  gap: 0.8rem;
+  font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
+}
+
+.main-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline; /* ← 超重要 */
+  gap: 0.8rem;
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+  letter-spacing: 0.4rem;
+  padding: 0 0.5rem;
+}
+
+.sub-title {
+  font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+  letter-spacing: 0.08em;
+}
+
+.unique-wrap {
+  font-size: clamp(0.625rem, 0.6rem + 0.13vw, 0.75rem);
+  display: inline-flex;
+  gap: 0.1rem;
+}
+
+.unique-1,
+.unique-2,
+.unique-3 {
+  background: linear-gradient(
+    180deg,
+    #fff1a8 0%,
+    #f0c94a 30%,
+    #cfa400 60%,
+    #9f7c00 100%
+  );
+
+  color: #1f1800;
+  border: 1px solid #a88300;
+}
+
+/*---------------------------------------------------------------------------footer---------------------------------------------------------------------------*/
+
+.end {
+  background-image: url("/portfolio/images/visual/decoration.png");
+  background-repeat: repeat;
+}
+
+.copy-right {
+  text-align: center;
+  font-size: clamp(0.625rem, 0.575rem + 0.25vw, 0.875rem);
+}
+
+/*---------------------------------------------------------------------------シャッターメニュー---------------------------------------------------------------------------*/
+
+.shutter-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 48vw;
+  max-width: 320px;
+  height: 100dvh; /* ★ iOS対応 */
+
+  background-image: url("/portfolio/images/visual/decoration.png");
+  background-repeat: repeat;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: calc(env(safe-area-inset-top) + 2rem) 0
+    calc(env(safe-area-inset-bottom) + 1.5rem);
+
+  /* スクロール制御（重要） */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  z-index: 6000;
+}
+
+.shutter-menu.active {
+  transform: translateX(0);
+}
+
+/* =========================
+   シャッターメニュー 中身
+========================= */
+.shutter-list {
+  flex: 1;
+  min-height: 0; /* ★ flex + scroll対策 */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* メニュー項目 */
+.access {
+  margin: 1.2rem 0;
+}
+
+.en {
+  font-size: clamp(0.875rem, 0.696rem + 0.89vw, 1.125rem);
+}
+
+.ja {
+  display: block;
+  font-size: clamp(0.625rem, 0.446rem + 0.89vw, 0.875rem);
+}
+
+.access a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Merriweather", serif;
+}
+
+/* hoverはPCのみ */
+@media (hover: hover) {
+  .access a:hover {
+    opacity: 0.6;
+  }
+}
+
+/* =========================
+   フッター情報
+========================= */
+.shutter-info {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.s-info-time {
+  font-size: clamp(0.625rem, 0.446rem + 0.89vw, 0.875rem);
+}
+
+.s-info-tel {
+  font-size: clamp(0.75rem, 0.571rem + 0.89vw, 1rem);
+  letter-spacing: 0.12em;
+}
+
+/* =========================
+   オーバーレイ
+========================= */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  z-index: 5500;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =========================
+   bodyロック（JS連動）
+========================= */
+body.menu-open {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*---------------------topページ---------------------------------------------------------------------------------*/
+
+body[data-page="top"] .top-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+}
+
+body[data-page="top"] .selection {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+body[data-page="top"] .top-visual {
+  width: 100%;
+  max-width: 600px;
+}
+
+body[data-page="top"] .top-visual img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+body[data-page="top"] .action-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+body[data-page="top"] .enter-link,
+.exit-link {
+  color: #bababa;
+  width: 40%;
+  border: 2px solid #bababa;
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  transition: 0.2s ease;
+}
+
+body[data-page="top"] .enter-link:hover,
+.exit-link:hover {
+  background: #bababa;
+  color: rgb(50, 45, 45);
+  transform: translateY(-2px);
+}
+
+body[data-page="top"] .mark {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+body[data-page="top"] .mark img {
+  opacity: 0.9;
+  width: 60px; /* ← これが最重要 */
+}
+
+body[data-page="top"] .top-en {
+  font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+  letter-spacing: 0.08em;
+}
+
+body[data-page="top"] .top-ja {
+  font-size: clamp(0.813rem, 0.75rem + 0.31vw, 1.125rem);
+}
+
+/* -----------------------------------------Cards Common -------------------------------------------------------*/
+
+.t-cards,
+.n-cards,
+.j-cards,
+.g-cards {
+  min-height: 320px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* カード単体 */
+.t-card,
+.n-card,
+.j-card,
+.g-card {
+  border-radius: 6px;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  contain: paint;
+}
+
+/* hover暗転（PCのみ） */
+@media (hover: hover) {
+  .t-card::after,
+  .n-card::after,
+  .j-card::after,
+  .g-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .t-card:hover::after,
+  .n-card:hover::after,
+  .j-card:hover::after,
+  .g-card:hover::after {
+    opacity: 1;
+  }
+}
+
+.t-img,
+.n-img,
+.j-img,
+.g-img {
+  width: 100%;
+  contain: paint;
+}
+
+/* 画像 */
+.t-img img,
+.n-img img,
+.j-img img,
+.g-img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.today-text,
+.new-text,
+.job-text,
+.g-text {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  align-items: left;
+  gap: 0.2rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+}
+
+/*名前*/
+.today-text .name,
+.new-text .name,
+.new-text .op-day,
+.job-text .name,
+.g-text .name {
+  font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+}
+
+/* 時間 */
+.today-text .time,
+.new-text .time,
+.job-text .time {
+  font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+}
+
+/* サイズ情報 */
+.today-text .size,
+.new-text .size,
+.job-text .size,
+.g-text .size {
+  font-size: clamp(0.688rem, 0.65rem + 0.19vw, 0.875rem);
+  opacity: 0.85;
+}
+
+/*--------------------------------------------home-------------------------------------------------------*/
+
+/*wait-girl 即ヒメ--------*/
+
+.w-cards {
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.w-card {
+  display: block;
+  background: #000;
+  overflow: hidden;
+  contain: layout paint;
+}
+
+.w-box {
+  position: relative;
+}
+
+.w-box img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  display: block;
+  object-fit: cover;
+}
+
+@media (hover: hover) {
+  .w-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .w-box:hover::after {
+    opacity: 1;
+  }
+}
+
+.wait-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.005rem;
+  z-index: 2;
+  color: #fff;
+  gap: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 0 0.25rem;
+}
+
+.wait-text .name {
+  font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.wait-text .size {
+  font-size: clamp(0.688rem, 0.662rem + 0.13vw, 0.813rem);
+  line-height: 1.25;
+  opacity: 0.85;
+}
+
+.wait-time {
+  background: #111;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.45rem 0.25rem;
+}
+
+/*today Girl-------------------*/
+
+body[data-page="home"] .closed {
+  font-size: clamp(0.875rem, 0.847rem + 0.08vw, 0.938rem);
+  color: rgb(255, 69, 69);
+}
+
+body[data-page="home"] .open {
+  font-size: clamp(0.875rem, 0.847rem + 0.08vw, 0.938rem);
+  color: #c9a24d; /* ゴールド系 */
+  font-weight: bold;
+}
+
+/* 受付終了時　暗転 */
+body[data-page="home"] .t-card.is-closed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* ← 暗さは好みで */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* hover用暗転はそのまま上に重なる */
+body[data-page="home"] .t-card::after {
+  z-index: 2;
+}
+
+/* テキスト類は最前面に */
+body[data-page="home"] .t-card.is-closed .today-text,
+.t-card.is-closed .closed {
+  position: relative;
+  z-index: 3;
+}
+
+/*---------------------------------------------working schedule〜出勤情報---------------------------------------------------------------------------*/
+
+body[data-page="working"] .day-list {
+  flex: 1;
+  text-align: center;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+  cursor: pointer;
+}
+
+body[data-page="working"] .day-list:hover {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+}
+
+body[data-page="working"] .day-list.is-active {
+  background: #fff;
+  color: #000;
+}
+
+body[data-page="working"] .day {
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  letter-spacing: 0.2rem;
+}
+
+body[data-page="working"] .week {
+  font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+}
+
+body[data-page="working"] .weekly-fixed-wrapper {
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 900;
+}
+
+/* 中央1000pxの箱 */
+body[data-page="working"] .weekly-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(52, 45, 45, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* 日付並び */
+body[data-page="working"] .weekly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+body[data-page="working"] .weekly li {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+body[data-page="working"] .weekly li.is-active {
+  background: #fff;
+  color: #000;
+}
+
+/*--------------------------------------girls~在籍一覧------------------------------------------*/
+
+body[data-page="girls"] .filter-area {
+  margin: 0 auto 2rem;
+  font-size: clamp(0.625rem, 0.575rem + 0.25vw, 0.875rem);
+}
+
+/* 上段：3条件 */
+
+body[data-page="girls"] .filter-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap; /* スマホで折り返し */
+  width: 100%;
+}
+
+body[data-page="girls"] .filter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body[data-page="girls"] .filter-item label {
+  font-size: clamp(0.813rem, 0.775rem + 0.19vw, 1rem);
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* セレクト */
+body[data-page="girls"] .select {
+  width: 150px;
+  max-width: 100%;
+  padding: 0.7rem 2.2rem 0.7rem 1rem;
+  font-size: clamp(0.813rem, 0.775rem + 0.19vw, 1rem);
+  color: #fff;
+  background-color: #5d5454;
+  border: 1px solid #999;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 2.2rem;
+  background: #5d5454
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><text x='2' y='14' fill='white' font-size='14'>▼</text></svg>")
+    no-repeat right 0.7rem center;
+}
+
+/* ▼ 適用ボタン */
+body[data-page="girls"] .filter-actions {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+body[data-page="girls"] .filter-btn {
+  max-width: 450px;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: clamp(0.813rem, 0.775rem + 0.19vw, 1rem);
+  font-weight: bold;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+
+body[data-page="girls"] .filter-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* -------------------------------------------profile------------------------------------------ */
+
+body[data-page="profile"] .detail-box {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  grid-template-rows: auto 1fr auto;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+body[data-page="profile"] .profile-media {
+  display: flex;
+  flex-direction: column;
+}
+
+body[data-page="profile"] .work-status {
+  font-size: clamp(1rem, 0.975rem + 0.13vw, 1.125rem);
+}
+
+body[data-page="profile"] .main-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  display: block;
+  object-fit: cover;
+}
+
+body[data-page="profile"] .thumb-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  min-height: 80px; /* ← sub画像が無くても高さ確保 */
+}
+
+body[data-page="profile"] .thumb-list img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  display: block;
+  cursor: pointer;
+}
+
+body[data-page="profile"] .main-data {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+body[data-page="profile"] .main-data p {
+  margin-bottom: 1rem;
+}
+
+body[data-page="profile"] .badge-honor {
+  font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+  display: inline-block;
+  padding-inline: 4px;
+  margin-left: 0.5rem;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    #fff1a8 0%,
+    #f0c94a 30%,
+    #cfa400 60%,
+    #9f7c00 100%
+  );
+
+  color: #1f1800;
+  border: 1px solid #a88300;
+  box-shadow:
+    inset 0 2px 2px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.25),
+    0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body[data-page="profile"] .badge-working {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #dc143c;
+  border-radius: 12px;
+  padding-inline: 8px;
+}
+
+body[data-page="profile"] .body-sizes {
+  font-size: clamp(1rem, 0.975rem + 0.13vw, 1.125rem);
+}
+
+body[data-page="profile"] .girl-name {
+  font-size: clamp(1.375rem, 1.275rem + 0.5vw, 1.875rem);
+  margin-bottom: 0.875rem;
+}
+
+body[data-page="profile"] .detail-data {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  row-gap: 1.2rem;
+  column-gap: 3rem;
+  margin-bottom: 1.85rem;
+  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+}
+
+body[data-page="profile"] .detail-data dt {
+  font-weight: bold;
+}
+
+/*出勤予定*/
+body[data-page="profile"] .work-sheet {
+  grid-column: 1 / -1;
+}
+
+body[data-page="profile"] .schedule-sp {
+  display: none;
+}
+
+body[data-page="profile"] .schedule-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  border-top: 1px solid #aaa;
+  padding: 1rem 0;
+}
+
+body[data-page="profile"] .schedule-head {
+  font-weight: bold;
+  border-bottom: 1px solid #aaa;
+}
+
+body[data-page="profile"] .schedule-body {
+  border-bottom: 1px solid #aaa;
+}
+
+body[data-page="profile"] .work-time {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+body[data-page="profile"] .status {
+  padding: 0.25em 0.75em;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #fff;
+}
+
+/*固定ナビ-------------------------------*/
+
+body[data-page="profile"] .side-nav {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 900;
+}
+
+/* 共通ボタン */
+body[data-page="profile"] .side-btn {
+  width: 62px;
+  height: 62px;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(4px);
+}
+
+/* アイコン */
+body[data-page="profile"] .side-btn .icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* ラベル（通常は非表示） */
+body[data-page="profile"] .side-btn .label {
+  font-size: 0.65rem;
+  margin-top: 0.2rem;
+  font-size: clamp(0.563rem, 0.512rem + 0.25vw, 0.813rem);
+  transform: translateY(4px);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+/* hover時 */
+body[data-page="profile"] .side-btn:hover {
+  background: #c9a24d;
+  border-color: #c9a24d;
+}
+
+/* 在籍一覧 */
+body[data-page="profile"] .side-btn.list {
+  background: rgba(40, 40, 40, 0.95);
+}
+
+/* 次の女性 */
+body[data-page="profile"] .side-btn.next {
+  background: rgba(20, 20, 20, 0.9);
+}
+
+/* 前の女性 */
+body[data-page="profile"] .side-btn.prev {
+  background: rgba(20, 20, 20, 0.9);
+}
+
+/* TOPへ戻る */
+body[data-page="profile"] .side-btn.top {
+  background: rgba(10, 10, 10, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* hover色を少し変えたい場合 */
+body[data-page="profile"] .side-btn.top:hover {
+  background: #fff;
+  color: #111;
+}
+
+body[data-page="profile"] .side-btn.top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+body[data-page="profile"] .side-btn.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/*system------------------------------------------------------------------*/
+
+body[data-page="system"] .system-list,
+.caution {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+body[data-page="system"] .system-list li {
+  margin-bottom: 1.25rem;
+}
+
+body[data-page="system"] .system-list h2 {
+  font-size: clamp(1.25rem, 1.05rem + 1vw, 2.25rem);
+  margin-bottom: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
+}
+
+body[data-page="system"] .corse-about {
+  font-size: clamp(1.125rem, 0.95rem + 0.88vw, 2rem);
+  font-weight: bold;
+  padding: 2% 0 1.5%;
+}
+
+body[data-page="system"] .corse-item {
+  font-size: clamp(0.875rem, 0.8rem + 0.38vw, 1.25rem);
+  padding: 2% 0 1.5%;
+  border-bottom: solid 1px #ffffff;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+body[data-page="system"] .corse-item dt {
+  text-align: center;
+}
+
+body[data-page="system"] .corse-item dd {
+  text-align: right;
+}
+
+body[data-page="system"] .caution h3 {
+  font-size: clamp(1.125rem, 0.95rem + 0.88vw, 2rem);
+  padding: 2% 0 1.5%;
+}
+
+body[data-page="system"] .caution-list {
+  margin-bottom: 1.25rem;
+}
+
+body[data-page="system"] .caution-list li {
+  list-style: inherit;
+  list-style-position: inside;
+  font-size: clamp(0.875rem, 0.8rem + 0.38vw, 1.25rem);
+}
+
+body[data-page="system"] .caution-list li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+body[data-page="system"] .handle {
+  font-size: clamp(0.875rem, 0.8rem + 0.38vw, 1.25rem);
+}
+
+/*concept*/
+
+body[data-page="concept"] .concept-box h3 {
+  font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
+  margin-bottom: 1.25rem;
+}
+
+body[data-page="concept"] .concept-text {
+  margin-bottom: 1.25rem;
+}
+
+body[data-page="concept"] .concept-text p {
+  font-size: clamp(0.875rem, 0.85rem + 0.13vw, 1rem);
+  line-height: 2;
+}
+
+/***レスポンシブ***/
+
+/*--------------------------------------------------------768px-----------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 0px;
+    --basic-info-height: 56px; /* ← SP用 */
+  }
+
+  main {
+    margin-top: var(--basic-info-height);
+  }
+  /*共通クラス----------------------*/
+
+  .a-container.job,
+  .a-container.girls {
+    max-width: none;
+    padding: 0;
+  }
+
+  /*header----------------------*/
+
+  .info-time,
+  .info-tel {
+    display: none;
+  }
+
+  /*ナビゲーションメニュー----------*/
+
+  .menu {
+    display: none;
+  }
+  nav::before {
+    display: none;
+  }
+
+  /*ハンバーガーメニュー------------*/
+
+  .basic-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    z-index: 8000;
+    background-color: rgb(76, 75, 77);
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 16px;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 9000;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    margin: 7px 0;
+    transition:
+      transform 0.35s ease,
+      opacity 0.25s ease;
+  }
+
+  /* ❌変形 */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  /*パンくずメニュー*/
+
+  .breadcrumb {
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Cards Common ---------------------------*/
+
+  .a-container.home .w-cards,
+  .a-container.home .n-cards,
+  .a-container.home .t-cards,
+  .a-container.job .j-cards,
+  .a-container.girls .g-cards,
+  .b-container {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  .w-cards,
+  .n-cards,
+  .t-cards,
+  .j-cards,
+  .g-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /*出勤情報-------------------------*/
+
+  body[data-page="working"] .working-casts .title {
+    margin-top: 1rem;
+  }
+  body[data-page="working"] .weekly-fixed-wrapper {
+    width: 100vw;
+    top: var(--basic-info-height);
+    margin-left: calc(50% - 50vw);
+    padding: 0 0.2rem;
+  }
+
+  /*profile-----------------------------------*/
+
+  body[data-page="profile"] .b-container.detail {
+    padding: 55px 1rem 0 1rem;
+  }
+
+  body[data-page="profile"] .detail-box {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  body[data-page="profile"] .detail-data {
+    column-gap: 1.2rem;
+    row-gap: 1rem;
+  }
+  body[data-page="profile"] .profile-media {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  body[data-page="profile"] .main-data {
+    text-align: left;
+  }
+  body[data-page="profile"] .schedule-pc {
+    display: none;
+  }
+
+  body[data-page="profile"] .schedule-sp {
+    display: block;
+    border: 1px solid #ccc;
+  }
+
+  body[data-page="profile"] .schedule-item {
+    display: grid;
+    grid-template-columns: 3fr 5fr auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.9rem;
+  }
+
+  /* profileナビボタン*/
+
+  body[data-page="profile"] .side-nav {
+    right: 0.5rem;
+    bottom: 1rem;
+    gap: 0.5rem;
+  }
+
+  body[data-page="profile"] .side-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    padding: 2px 0;
+  }
+
+  body[data-page="profile"] .side-btn .icon {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  /* 🔽 ラベルは小さく表示 */
+  body[data-page="profile"] .side-btn .label {
+    display: block;
+
+    margin-top: 0.15rem;
+    line-height: 1;
+    opacity: 0.85;
+    transform: none;
+  }
+
+  /* hover前提の色変更は無効化 */
+  body[data-page="profile"] .side-btn:hover {
+    background: rgba(20, 20, 20, 0.9);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+  }
+}
+
+/*--------------------------------------------------------580px---------------------------------------------------------------------------------*/
+
+@media (max-width: 580px) {
+  /* Cards Common ---------------------------*/
+  .t-cards,
+  .n-cards,
+  .w-cards,
+  .j-cards,
+  .g-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*-------------------------------------------------500px----------------------------------------*/
+
+@media screen and (max-width: 500px) {
+  /*topページ*/
+
+  body[data-page="top"] .top-container {
+    padding: 0 1rem;
+  }
+
+  body[data-page="top"] .enter-link,
+  .exit-link {
+    padding: 0.25rem 0;
+  }
+
+  body[data-page="top"] .mark img {
+    width: 40px;
+  }
+
+  /*home--------------------------------*/
+
+  body[data-page="home"] .n-cards {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  body[data-page="home"] .n-card {
+    flex-direction: row;
+  }
+
+  body[data-page="home"] .n-img {
+    width: 40%;
+  }
+
+  body[data-page="home"] .new-text {
+    width: 60%;
+    padding: 0 4%;
+    gap: 0.5rem;
+  }
+
+  body[data-page="home"] .new-text .name {
+    font-size: clamp(0.875rem, 0.653rem + 1.11vw, 1rem);
+  }
+
+  body[data-page="home"] .new-text .size {
+    font-size: clamp(0.75rem, 0.528rem + 1.11vw, 0.875rem);
+  }
+
+  body[data-page="home"] .new-text .op-day {
+    font-size: clamp(0.813rem, 0.59rem + 1.11vw, 0.938rem);
+  }
+}
+
+/*-------------------------------------------------375px----------------------------------------*/
+
+@media screen and (max-width: 375px) {
+  body[data-page="top"] .top-container {
+    padding: 0;
+  }
+}
+
+/* --------------------------------------------------hover none----------------------------------------*/
+
+@media (hover: none) {
+  .w-box::after,
+  .t-card::after,
+  .n-card::after,
+  .j-card::after,
+  .g-card::after {
+    content: none !important;
+  }
+}
