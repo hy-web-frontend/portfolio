@@ -439,63 +439,82 @@ body.menu-open {
 
 /*---------------------topページ---------------------------------------------------------------------------------*/
 
-body[data-page="top"] .top-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
+body[data-page="top"] {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
 }
 
+/* 外枠 */
+body[data-page="top"] .top-container {
+  height: 100svh; /* ★ iOS対策 */
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 中央ブロック */
 body[data-page="top"] .selection {
-  margin: auto;
   width: 100%;
   max-width: 600px;
-  text-align: center;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
   gap: 2rem;
+  padding: 1rem;
 }
 
+/* メインビジュアル */
 body[data-page="top"] .top-visual {
   width: 100%;
-  max-width: 600px;
 }
 
 body[data-page="top"] .top-visual img {
   width: 100%;
-  max-width: 600px;
   height: auto;
   display: block;
   border-radius: 10px;
 }
 
+/* ボタン列 */
 body[data-page="top"] .action-row {
   width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 12px;
 }
 
+/* ENTER / EXIT */
 body[data-page="top"] .enter-link,
-.exit-link {
-  color: #bababa;
+body[data-page="top"] .exit-link {
   width: 40%;
+  color: #bababa;
+
   border: 2px solid #bababa;
   border-radius: 10px;
   padding: 0.5rem 0;
+
+  text-align: center;
   transition: 0.2s ease;
 }
 
 body[data-page="top"] .enter-link:hover,
-.exit-link:hover {
+body[data-page="top"] .exit-link:hover {
   background: #bababa;
   color: rgb(50, 45, 45);
   transform: translateY(-2px);
 }
 
+/* 18禁マーク */
 body[data-page="top"] .mark {
   width: 20%;
   display: flex;
@@ -503,10 +522,11 @@ body[data-page="top"] .mark {
 }
 
 body[data-page="top"] .mark img {
+  width: 60px;
   opacity: 0.9;
-  width: 60px; /* ← これが最重要 */
 }
 
+/* テキスト */
 body[data-page="top"] .top-en {
   font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
   letter-spacing: 0.08em;
@@ -1475,3 +1495,4 @@ body[data-page="concept"] .concept-text p {
     content: none !important;
   }
 }
+
