@@ -1,7 +1,7 @@
 /*github 経由 */
 
 const BASE =
-  "https://raw.githubusercontent.com/hy-web-frontend/site-data/main/data";
+  "https://raw.githubusercontent.com/hy-web-frontend/portfolio/main/data";
 
 const API = {
   casts: `${BASE}/casts.json`,
