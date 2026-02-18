@@ -1196,7 +1196,7 @@ body[data-page="system"] .handle {
 /*--------------------------------------------concept-----------------------------------------------------------*/
 
 body[data-page="concept"] .concept-box h3 {
- font-size: clamp(1.125rem, 0.975rem + 0.75vw, 1.875rem);
+ font-size: clamp(1rem, 0.825rem + 0.88vw, 1.875rem);
   margin-bottom: 1.25rem;
 }
 
@@ -1205,7 +1205,7 @@ body[data-page="concept"] .concept-text {
 }
 
 body[data-page="concept"] .concept-text p {
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  font-size: clamp(0.875rem, 0.8rem + 0.38vw, 1.25rem)
   line-height: 2;
 }
 
@@ -1495,6 +1495,7 @@ body[data-page="concept"] .concept-text p {
     content: none !important;
   }
 }
+
 
 
 
