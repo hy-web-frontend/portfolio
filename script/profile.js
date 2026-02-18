@@ -62,7 +62,7 @@ function initProfileNavigation(allCasts) {
   const next = sorted[currentIndex + 1];
 
   if (prev) {
-    prevBtn.href = `Profile.html?id=${prev.id}`;
+    prevBtn.href = `profile.html?id=${prev.id}`;
     prevBtn.classList.remove("disabled");
   } else {
     prevBtn.removeAttribute("href");
@@ -70,7 +70,7 @@ function initProfileNavigation(allCasts) {
   }
 
   if (next) {
-    nextBtn.href = `Profile.html?id=${next.id}`;
+    nextBtn.href = `profile.html?id=${next.id}`;
     nextBtn.classList.remove("disabled");
   } else {
     nextBtn.removeAttribute("href");
