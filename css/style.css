@@ -466,8 +466,8 @@ body[data-page="top"] .selection {
   align-items: center;
   justify-content: center;
 
-  gap: 2rem;
-  padding: 1rem;
+  gap: 1.25rem;
+  padding: 0.5rem;
 }
 
 /* メインビジュアル */
@@ -1495,4 +1495,5 @@ body[data-page="concept"] .concept-text p {
     content: none !important;
   }
 }
+
 
