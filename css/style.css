@@ -103,7 +103,7 @@ section {
 }
 
 nav {
-  background-image: url(../images/visual/decoration.png);
+  background-image: url(/images/visual/decoration.png);
   background-repeat: repeat;
   width: 100%;
   height: var(--nav-height);
@@ -1458,3 +1458,4 @@ body[data-page="concept"] .concept-text p {
     opacity: 1;
   }
 }
+
