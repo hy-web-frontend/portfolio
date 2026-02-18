@@ -57,7 +57,7 @@ const renderGirls = (casts) => {
           .join("");
 
         return `
-          <a href="Profile.html?id=${cast.id}" class="g-card">
+          <a href="profile.html?id=${cast.id}" class="g-card">
             <div class="g-img">
               <img
                 src="${cast.main_photo}"
