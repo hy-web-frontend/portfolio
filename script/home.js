@@ -81,7 +81,7 @@ const renderNowCasts = (casts) => {
       const isLCP = index === 0;
 
       return `
-        <a href="Profile.html?id=${cast.id}" class="w-card">
+        <a href="profile.html?id=${cast.id}" class="w-card">
           <div class="w-box">
             <img
               src="${cast.main_photo}"
@@ -163,7 +163,7 @@ const renderTodayCasts = (casts) => {
       const isClosed = isTrue(cast.reception);
 
       return `
-        <a href="Profile.html?id=${cast.id}"
+        <a href="profile.html?id=${cast.id}"
            class="t-card ${isClosed ? "is-closed" : ""}">
 
           <div class="t-img">
@@ -217,7 +217,7 @@ const renderNewCasts = (casts) => {
       const uniqueHtml = buildUniqueHtml(cast);
 
       return `
-        <a href="Profile.html?id=${cast.id}" class="n-card">
+        <a href="profile.html?id=${cast.id}" class="n-card">
           <div class="n-img">
             <img
               src="${cast.main_photo}"
