@@ -206,18 +206,31 @@ const renderTodayCasts = (casts) => {
 };
 
 /* =================================================
-   新人キャスト描画
+   新人キャスト描画（入店日 昇順）
 ================================================= */
 const renderNewCasts = (casts) => {
   const container = document.querySelector(".n-cards");
   if (!container) return;
 
-  container.innerHTML = casts
+  const sorted = [...casts]
+    .map((c) => ({
+      ...c,
+      _openingDate: parseOpeningDate(c.opening),
+    }))
+    // 日付があるものを優先、古い日付 → 新しい日付
+    .sort((a, b) => {
+      if (!a._openingDate && !b._openingDate) return 0;
+      if (!a._openingDate) return 1;
+      if (!b._openingDate) return -1;
+      return a._openingDate - b._openingDate;
+    });
+
+  container.innerHTML = sorted
     .map((cast) => {
       const uniqueHtml = buildUniqueHtml(cast);
 
       return `
-        <a href="profile.html?id=${cast.id}" class="n-card">
+        <a href="Profile.html?id=${cast.id}" class="n-card">
           <div class="n-img">
             <img
               src="${cast.main_photo}"
