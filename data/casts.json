@@ -8,11 +8,11 @@
     "size": "(B)",
     "waist": "58",
     "hip": "84",
-    "unique_1": "新人割対象",
+    "unique_1": "",
     "unique_2": "",
     "unique_3": "",
-    "is_new": "TRUE",
-    "opening": "2月16日"
+    "is_new": "",
+    "opening": ""
   },
   {
     "id": "1102",
@@ -23,8 +23,8 @@
     "size": "(B)",
     "waist": "58",
     "hip": "84",
-    "unique_1": "リピ多",
-    "unique_2": "人気嬢",
+    "unique_1": "",
+    "unique_2": "",
     "unique_3": "",
     "is_new": "",
     "opening": ""
@@ -38,7 +38,7 @@
     "size": "(C)",
     "waist": "59",
     "hip": "86",
-    "unique_1": "体験入店",
+    "unique_1": "",
     "unique_2": "",
     "unique_3": "",
     "is_new": "",
@@ -53,7 +53,7 @@
     "size": "(C)",
     "waist": "59",
     "hip": "86",
-    "unique_1": "",
+    "unique_1": "No1",
     "unique_2": "",
     "unique_3": "",
     "is_new": "",
@@ -83,11 +83,11 @@
     "size": "(C)",
     "waist": "60",
     "hip": "87",
-    "unique_1": "新人割対象",
+    "unique_1": "",
     "unique_2": "",
     "unique_3": "",
-    "is_new": "TRUE",
-    "opening": "2月16日"
+    "is_new": "",
+    "opening": ""
   },
   {
     "id": "1107",
@@ -113,7 +113,7 @@
     "size": "(D)",
     "waist": "61",
     "hip": "88",
-    "unique_1": "",
+    "unique_1": "No2",
     "unique_2": "",
     "unique_3": "",
     "is_new": "",
@@ -143,11 +143,11 @@
     "size": "(D)",
     "waist": "61",
     "hip": "89",
-    "unique_1": "新人割対象",
+    "unique_1": "",
     "unique_2": "",
     "unique_3": "",
-    "is_new": "TRUE",
-    "opening": "2月16日"
+    "is_new": "",
+    "opening": ""
   },
   {
     "id": "1111",
@@ -174,10 +174,10 @@
     "waist": "62",
     "hip": "91",
     "unique_1": "",
-    "unique_2": "",
+    "unique_2": "新人割対象",
     "unique_3": "",
-    "is_new": "",
-    "opening": ""
+    "is_new": "TRUE",
+    "opening": "2月20日"
   },
   {
     "id": "1113",
@@ -218,11 +218,11 @@
     "size": "(F)",
     "waist": "64",
     "hip": "93",
-    "unique_1": "新人割対象",
+    "unique_1": "",
     "unique_2": "",
     "unique_3": "",
-    "is_new": "TRUE",
-    "opening": "2月16日"
+    "is_new": "",
+    "opening": ""
   },
   {
     "id": "1116",
@@ -249,10 +249,10 @@
     "waist": "65",
     "hip": "94",
     "unique_1": "",
-    "unique_2": "",
+    "unique_2": "新人割対象",
     "unique_3": "",
-    "is_new": "",
-    "opening": ""
+    "is_new": "TRUE",
+    "opening": "2月20日"
   },
   {
     "id": "1118",
@@ -308,7 +308,7 @@
     "size": "(C)",
     "waist": "59",
     "hip": "85",
-    "unique_1": "",
+    "unique_1": "No2",
     "unique_2": "",
     "unique_3": "",
     "is_new": "",
@@ -339,10 +339,10 @@
     "waist": "61",
     "hip": "89",
     "unique_1": "",
-    "unique_2": "",
+    "unique_2": "新人割対象",
     "unique_3": "",
-    "is_new": "",
-    "opening": ""
+    "is_new": "TRUE",
+    "opening": "2月21日"
   },
   {
     "id": "1124",
@@ -399,10 +399,10 @@
     "waist": "65",
     "hip": "95",
     "unique_1": "",
-    "unique_2": "",
+    "unique_2": "新人割対象",
     "unique_3": "",
-    "is_new": "",
-    "opening": ""
+    "is_new": "TRUE",
+    "opening": "2月21日"
   },
   {
     "id": "1128",
@@ -519,10 +519,10 @@
     "waist": "61",
     "hip": "89",
     "unique_1": "",
-    "unique_2": "",
+    "unique_2": "新人割対象",
     "unique_3": "",
-    "is_new": "",
-    "opening": ""
+    "is_new": "TRUE",
+    "opening": "2月18日"
   },
   {
     "id": "1136",
