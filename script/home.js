@@ -205,40 +205,44 @@ const renderTodayCasts = (casts) => {
     .join("");
 };
 
+/*入店日　早い順　opening を「月日 → 数値」に変換して sort*/
+const sortByOpening = (casts) => {
+  return [...casts].sort((a, b) => {
+    if (!a.opening && !b.opening) return 0;
+    if (!a.opening) return 1;
+    if (!b.opening) return -1;
+
+    const toNum = (str) => {
+      const m = str.match(/(\d+)月(\d+)日/);
+      return m ? Number(m[1]) * 100 + Number(m[2]) : 9999;
+    };
+
+    return toNum(a.opening) - toNum(b.opening);
+  });
+};
+
+
 /* =================================================
-   新人キャスト描画（入店日 昇順）
+   新人キャスト描画
 ================================================= */
+
 const renderNewCasts = (casts) => {
   const container = document.querySelector(".n-cards");
   if (!container) return;
 
-  const sorted = [...casts]
-    .map((c) => ({
-      ...c,
-      _openingDate: parseOpeningDate(c.opening),
-    }))
-    // 日付があるものを優先、古い日付 → 新しい日付
-    .sort((a, b) => {
-      if (!a._openingDate && !b._openingDate) return 0;
-      if (!a._openingDate) return 1;
-      if (!b._openingDate) return -1;
-      return a._openingDate - b._openingDate;
-    });
+  const sorted = sortByOpening(casts);
 
   container.innerHTML = sorted
     .map((cast) => {
       const uniqueHtml = buildUniqueHtml(cast);
 
       return `
-        <a href="Profile.html?id=${cast.id}" class="n-card">
+        <a href="profile.html?id=${cast.id}" class="n-card">
           <div class="n-img">
             <img
               src="${cast.main_photo}"
               alt="${cast.name}"
               loading="lazy"
-              decoding="async"
-              width="240"
-              height="320"
             />
           </div>
 
