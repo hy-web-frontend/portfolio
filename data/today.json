@@ -20,19 +20,19 @@
   {
     "id": "1104",
     "name": "あいか",
-    "is_wait": "FALSE",
-    "updated_at": ""
+    "is_wait": "TRUE",
+    "updated_at": "12:30"
   },
   {
     "id": "1105",
     "name": "ゆずき",
-    "is_wait": "FALSE",
+    "is_wait": "TRUE",
     "updated_at": ""
   },
   {
     "id": "1106",
     "name": "れいか",
-    "is_wait": "FALSE",
+    "is_wait": "TRUE",
     "updated_at": ""
   },
   {
