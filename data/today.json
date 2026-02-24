@@ -26,8 +26,8 @@
   {
     "id": "1105",
     "name": "ゆずき",
-    "is_wait": "TRUE",
-    "updated_at": "9:05"
+    "is_wait": "FALSE",
+    "updated_at": ""
   },
   {
     "id": "1106",
@@ -38,13 +38,13 @@
   {
     "id": "1107",
     "name": "えれな",
-    "is_wait": "TRUE",
+    "is_wait": "FALSE",
     "updated_at": "9:05"
   },
   {
     "id": "1108",
     "name": "みく",
-    "is_wait": "TRUE",
+    "is_wait": "FALSE",
     "updated_at": "9:05"
   },
   {
