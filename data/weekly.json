@@ -71,7 +71,7 @@
       "date": "G",
       "start": "10:00",
       "end": "22:00",
-      "reception": ""
+      "reception": "TRUE"
     },
     {
       "id": "1102",
