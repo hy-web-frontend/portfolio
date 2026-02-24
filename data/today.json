@@ -2,13 +2,13 @@
   {
     "id": "1101",
     "name": "りな",
-    "is_wait": "TRUE",
-    "updated_at": "9:05"
+    "is_wait": "FALSE",
+    "updated_at": ""
   },
   {
     "id": "1102",
     "name": "じゅりな",
-    "is_wait": "TRUE",
+    "is_wait": "FALSE",
     "updated_at": "9:05"
   },
   {
