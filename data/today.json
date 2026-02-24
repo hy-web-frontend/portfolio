@@ -3,13 +3,13 @@
     "id": "1101",
     "name": "りな",
     "is_wait": "TRUE",
-    "updated_at": "8:47"
+    "updated_at": "9:05"
   },
   {
     "id": "1102",
     "name": "じゅりな",
     "is_wait": "TRUE",
-    "updated_at": "8:47"
+    "updated_at": "9:05"
   },
   {
     "id": "1103",
@@ -21,43 +21,43 @@
     "id": "1104",
     "name": "あいか",
     "is_wait": "TRUE",
-    "updated_at": "8:47"
+    "updated_at": "9:05"
   },
   {
     "id": "1105",
     "name": "ゆずき",
     "is_wait": "TRUE",
-    "updated_at": "8:47"
+    "updated_at": "9:05"
   },
   {
     "id": "1106",
     "name": "れいか",
-    "is_wait": "TRUE",
-    "updated_at": "8:47"
+    "is_wait": "FALSE",
+    "updated_at": ""
   },
   {
     "id": "1107",
     "name": "えれな",
-    "is_wait": "FALSE",
-    "updated_at": ""
+    "is_wait": "TRUE",
+    "updated_at": "9:05"
   },
   {
     "id": "1108",
     "name": "みく",
-    "is_wait": "FALSE",
-    "updated_at": ""
+    "is_wait": "TRUE",
+    "updated_at": "9:05"
   },
   {
     "id": "1109",
     "name": "まい",
     "is_wait": "TRUE",
-    "updated_at": "8:47"
+    "updated_at": "9:05"
   },
   {
     "id": "1110",
     "name": "ちひろ",
-    "is_wait": "TRUE",
-    "updated_at": "8:47"
+    "is_wait": "FALSE",
+    "updated_at": ""
   },
   {
     "id": "1111",
