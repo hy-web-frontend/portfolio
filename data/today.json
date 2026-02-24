@@ -33,7 +33,7 @@
     "id": "1106",
     "name": "れいか",
     "is_wait": "TRUE",
-    "updated_at": ""
+    "updated_at": "12:30"
   },
   {
     "id": "1107",
@@ -50,8 +50,8 @@
   {
     "id": "1109",
     "name": "まい",
-    "is_wait": "FALSE",
-    "updated_at": ""
+    "is_wait": "TRUE",
+    "updated_at": "12:30"
   },
   {
     "id": "1110",
